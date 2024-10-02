@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/bg.jpg) no-repeat center/cover;
+  overflow-x: hidden;
+}
+#main .starting_part {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+#main .starting_part .kakasi_div {
+  width: 800px;
+  height: 600px;
+  background: rgba(194, 181, 181, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: all linear 0.8s;
+}
+#main .starting_part .kakasi_div img{
+    position: relative;
+    z-index: 2;
+}
+#main .starting_part .kakasi_div .messgae_box {
+	width: 400px;
+	height: 250px;
+	clip-path: polygon( 5% 0%, 95% 0%, 100% 5%, 100% 32.93%, 95.56% 38.75%, 77.68% 38.75%, 95.73% 50.52%, 59.81% 38.75%, 5% 38.75%, 0% 32.93%, 0% 5% );
+	background-color: #e6e7e3;
+	position: absolute;
+	top: 80px;
+	left: 200px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+#main .starting_part .kakasi_div .messgae_box h2{
+	font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+}
+#main .starting_part .kakasi_div .messgae_box h3{
+	font-family: "Play", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+}
+#main .starting_part .kakasi_div .messgae_box p{
+	font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+/* BUtton CSS */
+.all_btn_design {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #0D141E;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.all_btn_design::after,
+.all_btn_design::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.all_btn_design::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #BEC8CA;
+  border-radius: 10px;
+}
+
+.all_btn_design::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #262c3c44;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.all_btn_design:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.all_btn_design:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.all_btn_design:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+.first_player_name_btn::before{
+  background: #E78F4F;
+}
+
+#main .starting_part .first_player_div {
+ width: 800px;
+  height: 600px;
+  background: rgba(194, 181, 181, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  top: 50%;
+  left: 500%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all linear 0.4s;
+} 
+
+#main .starting_part .first_player_div .naruto_image {
+	position: absolute;
+	top: 59%;
+	left: -20%;
+	transform: translateY(-50%);
+}
+
+#main .starting_part .first_player_div input {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  border-radius: 20px;
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  outline: 0;
+  border: 2px solid #E78F4F;
+}
+
+#main .starting_part .first_player_div .warning_First_player_name {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #be2e2e;
+  position: absolute;
+  top: 58%;
+}
+
+#main .starting_part .first_player_div_number {
+ width: 800px;
+  height: 600px;
+  background: rgba(194, 181, 181, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  top: 50%;
+  left: 500%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all linear 0.4s;
+} 
+
+#main .starting_part .first_player_div_number .first_player_name_videw {
+	font-family: "Play", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 60px;
+	position: absolute;
+	top: 110px;
+}
+
+#main .starting_part .first_player_div_number .worning {
+	font-family: "Play", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 20px;
+	position: absolute;
+	top: 200px;
+}
+
+#main .starting_part .first_player_div_number .naruto_image {
+	position: absolute;
+	top: 59%;
+	left: -20%;
+	transform: translateY(-50%);
+}
+
+#main .starting_part .first_player_div_number input {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  border-radius: 20px;
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  outline: 0;
+  border: 2px solid #E78F4F;
+}
+
+#main .starting_part .first_player_div_number .warning_First_player_number {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #be2e2e;
+  position: absolute;
+  top: 58%;
+}
+
+
+
+#main .starting_part .secound_player_div {
+ width: 800px;
+  height: 600px;
+  background: rgba(194, 181, 181, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  top: 50%;
+  left: 500%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all linear 0.4s;
+} 
+
+#main .starting_part .secound_player_div .saske_image {
+	position: absolute;
+	top: 59%;
+	right: -20%;
+	transform: translateY(-50%) scale(.8);
+}
+
+#main .starting_part .secound_player_div input {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  border-radius: 20px;
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  outline: 0;
+  border: 2px solid #1F2633;
+}
+
+#main .starting_part .secound_player_div .warning_secound_player_name {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #be2e2e;
+  position: absolute;
+  top: 58%;
+}
+
+#main .starting_part .secound_player_div_number {
+ width: 800px;
+  height: 600px;
+  background: rgba(194, 181, 181, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  top: 50%;
+  left: 500%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all linear 0.4s;
+} 
+
+#main .starting_part .secound_player_div_number .secound_player_name_videw {
+	font-family: "Play", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 60px;
+	position: absolute;
+	top: 110px;
+}
+
+#main .starting_part .secound_player_div_number .worning {
+	font-family: "Play", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 20px;
+	position: absolute;
+	top: 200px;
+}
+
+#main .starting_part .secound_player_div_number .saske_image {
+	position: absolute;
+	top: 59%;
+	right: -20%;
+	transform: translateY(-50%) scale(.8);
+}
+
+#main .starting_part .secound_player_div_number input {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  border-radius: 20px;
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  outline: 0;
+  border: 2px solid #1F2633;
+}
+
+#main .starting_part .secound_player_div_number .warning_secound_player_number {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #be2e2e;
+  position: absolute;
+  top: 58%;
+}
+
+#main .starting_part .secound_player_div_number .total_try {
+  font-family: "Play", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 80px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #1F2633;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #E78F4F;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.winner_bord{
+  width: 500px;
+  height: 300px;
+  background: rgba(194, 181, 181, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  top: 50%;
+  left: 500%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.winner_bord .winner_name{
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+}
+
+.winner_bord h5{
+  font-family: "Play", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 60px;
+  color: rgb(228, 228, 49);
+}
